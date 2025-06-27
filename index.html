@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Weather</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🌎 Global Weather</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <div class="weather-emoji" id="weatherEmoji">☁️</div>
+      <h2 id="cityName">City</h2>
+      <p id="description">Condition</p>
+      <img id="weatherIcon" src="" alt="Weather Icon" />
+      <div class="temperature" id="temperature">--°C</div>
+      <div class="extra">
+        <p><strong>💧 Humidity:</strong> <span id="humidity">--</span>%</p>
+        <p><strong>🌬️ Wind:</strong> <span id="wind">--</span> m/s</p>
+        <p><strong>🌅 Sunrise:</strong> <span id="sunrise">--:--</span></p>
+        <p><strong>🌇 Sunset:</strong> <span id="sunset">--:--</span></p>
+      </div>
+    </div>
+
+    <div id="forecast" class="forecast hidden">
+      <h3>5-Day Forecast</h3>
+      <div id="forecastCards" class="forecast-cards"></div>
+    </div>
+
+    <p id="errorMessage" class="error-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
